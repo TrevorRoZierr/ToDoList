@@ -20,6 +20,11 @@ app.post("/", (req, res) => {
   res.redirect("/");
 });
 
+app.post("/clearItems", (req, res) => {
+  items = [];
+  res.send("Items cleared");
+});
+
 app.listen(process.env.PORT || 3000, () => {
   console.log("Live on server : 3000");
 });
